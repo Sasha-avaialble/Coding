@@ -1,0 +1,31 @@
+{
+  "name": "hardhat-fund-me",
+  "author": "Sasha Balanuik",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@chainlink/contracts": "^0.4.2",
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.13",
+    "@openzeppelin/contracts": "^4.7.3",
+    "ethers": "^5.7.0",
+    "hardhat": "^2.10.2",
+    "hardhat-gas-reporter": "^1.0.8",
+    "prettier": "^2.7.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.24",
+    "solidity-coverage": "^0.7.21"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "hardhat-deploy": "^0.11.12",
+    "solhint": "^3.3.7"
+  },
+  "scripts": {
+    "solhint": "./node_modules/.bin/solhint -f table contracts/**/*.sol",
+    "test": "npx hardhat test",
+    "test:staging": "npx hardhat test --network rinkeby",
+    "lint": "npx solhint contracts/*.sol",
+    "lint:fix": "npx solhint 'contracts/*.sol' --fix",
+    "format": "npx prettier --write .",
+    "coverage": "npx hardhat coverage"
+  }
+}
